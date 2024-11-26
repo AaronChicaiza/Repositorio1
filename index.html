@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="gestión, sistema, quinto">
+    <meta name="keywords" content="gestión, sistema, quinto, blog, personal">
+    <meta name="description" content="Blog personal de Aarón Chicaiza, estudiante de Ingeniería en Sistemas. Descubre más sobre mi vida, mis hobbies y cómo contactarme.">
     <title>Blog Personal de Aarón</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,13 +14,15 @@
     <header>
         <h1>¡Bienvenidos a mi Blog!</h1>
     </header>
+
     <nav>
-        <button onclick="location.href='#presentacion'">Presentación</button>
-        <button onclick="location.href='#hobby'">Mi Hobby</button>
-        <button onclick="location.href='#contacto'">Contacto</button>
+        <button type="button" onclick="mostrarSeccion('presentacion')">Presentación</button>
+        <button type="button" onclick="mostrarSeccion('hobby')">Mi Hobby</button>
+        <button type="button" onclick="mostrarSeccion('contacto')">Contacto</button>
     </nav>
+
     <main>
-        <section id="presentacion">
+        <section id="presentacion" class="seccion">
             <h2>Presentación Personal</h2>
             <p>Hola, soy Aarón Chicaiza. Tengo 22 años y me encanta ir al gimnasio, especialmente hacer bench press.</p>
             <p>Actualmente estudio Ingeniería en Sistemas en la Universidad Técnica de Cotopaxi.</p>
@@ -27,19 +30,30 @@
             <img src="img.png" alt="Imagen de Aarón" class="profile-img">
         </section>
 
-        <section id="hobby">
+        <section id="hobby" class="seccion" style="display: none;">
             <h2>Mi Hobby</h2>
-            <p>Uno de mis hobbies favoritos es ir al gimnasio. Disfruto especialmente del bench press porque me ayuda a trabajar varios grupos musculares y me hace sentir más fuerte. El gym es parte esencial de mi rutina diaria y contribuye a mi bienestar.</p>
+            <p>Uno de mis hobbies favoritos es ir al gimnasio. Disfruto especialmente del bench press porque me ayuda a trabajar varios grupos musculares y me hace sentir más fuerte.</p>
+            <p>El gym es parte esencial de mi rutina diaria y contribuye a mi bienestar.</p>
         </section>
 
-        <section id="contacto">
+        <section id="contacto" class="seccion" style="display: none;">
             <h2>Contacto</h2>
-            <p>Si quieres saber más sobre mí o simplemente conectar, puedes escribirme a mi correo: <strong>chicaizaaron@gmail.com</strong>.</p>
+            <p>Si quieres saber más sobre puedes escribirme a mi correo: <strong>chicaizaaaron@gmail.com</strong>.</p>
         </section>
     </main>
+
     <footer>
         <p>© 2024 Aarón Chicaiza. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        function mostrarSeccion(seccionId) {
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(seccion => {
+                seccion.style.display = seccion.id === seccionId ? 'block' : 'none';
+            });
+        }
+    </script>
 </body>
 
 </html>

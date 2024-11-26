@@ -1,20 +1,24 @@
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ebf2fa;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
+
 header {
-    background-color: #0056b3;
-    color: white;
+    background-color: #0056b3; 
+    color: #fff;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
+
 nav {
-    background-color: #003d7a;
+    background-color: #003d7a; 
     padding: 10px;
     text-align: center;
 }
@@ -27,34 +31,60 @@ nav button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 nav button:hover {
-    background-color: #004290;
+    background-color: #004290; 
+    transform: scale(1.05); 
 }
+
 
 main {
-    margin: 20px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: white;
+    max-width: 800px; 
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-main section {
-    margin-bottom: 20px;
-}
 
 .profile-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin: 20px 0;
+    object-fit: cover; 
 }
+
 
 footer {
     background-color: #003d7a;
     color: white;
     text-align: center;
     padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 600px) {
+    nav button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .profile-img {
+        width: 120px; 
+        height: 120px;
+    }
 }
