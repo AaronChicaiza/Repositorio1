@@ -11,41 +11,50 @@
 </head>
 
 <body>
+    <!-- Encabezado principal -->
     <header>
         <h1>¡Bienvenidos a mi Blog!</h1>
     </header>
 
+    <!-- Barra de navegación -->
     <nav>
         <button type="button" onclick="mostrarSeccion('presentacion')">Presentación</button>
         <button type="button" onclick="mostrarSeccion('hobby')">Mi Hobby</button>
         <button type="button" onclick="mostrarSeccion('contacto')">Contacto</button>
     </nav>
 
+    <!-- Contenidos dinámicos -->
     <main>
         <section id="presentacion" class="seccion">
             <h2>Presentación Personal</h2>
-            <p>Hola, soy Aarón Chicaiza. Tengo 22 años y me encanta ir al gimnasio, especialmente hacer bench press.</p>
+            <p>Hola, soy Aarón Chicaiza y tengo 22 años.</p>
             <p>Actualmente estudio Ingeniería en Sistemas en la Universidad Técnica de Cotopaxi.</p>
-            <p>Mi comida favorita son las hamburguesas, y mi color favorito es el azul.</p>
+            <p>Mi comida favorita son las hamburguesas y mi color favorito es el azul.</p>
             <img src="img.png" alt="Imagen de Aarón" class="profile-img">
         </section>
 
         <section id="hobby" class="seccion" style="display: none;">
             <h2>Mi Hobby</h2>
-            <p>Uno de mis hobbies favoritos es ir al gimnasio. Disfruto especialmente del bench press porque me ayuda a trabajar varios grupos musculares y me hace sentir más fuerte.</p>
+            <p>Uno de mis hobbies favoritos es ir al gimnasio. Mi ejercicio favorito es el bench press porque me ayuda a trabajar varios grupos musculares y me hace sentir más fuerte.</p>
             <p>El gym es parte esencial de mi rutina diaria y contribuye a mi bienestar.</p>
         </section>
 
         <section id="contacto" class="seccion" style="display: none;">
             <h2>Contacto</h2>
-            <p>Si quieres saber más sobre puedes escribirme a mi correo: <strong>chicaizaaaron@gmail.com</strong>.</p>
+            <p>Si quieres saber más sobre mí, puedes escribirme a mi correo o visitar mi Facebook: <strong>chicaizaaaron@gmail.com</strong>.</p>
+            <!-- Botón para ir a Facebook -->
+            <button onclick="window.open('https://www.facebook.com/isaac.chicaisa.1', '_blank')" style="margin-top: 20px; padding: 10px 20px; background-color: #4267B2; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Ir a mi Facebook
+            </button>
         </section>
     </main>
 
+    <!-- Pie de página -->
     <footer>
         <p>© 2024 Aarón Chicaiza. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Script para cambiar entre secciones -->
     <script>
         function mostrarSeccion(seccionId) {
             const secciones = document.querySelectorAll('.seccion');
