@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gestión, sistema, quinto, blog, personal">
+    <meta name="description" content="Blog personal de Aarón Chicaiza, estudiante de Ingeniería en Sistemas. Descubre más sobre mi vida, mis hobbies y cómo contactarme.">
+    <title>Blog Personal de Aarón</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1>¡Bienvenidos a mi Blog!</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="mostrarSeccion('presentacion')">Presentación</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="mostrarSeccion('hobby')">Mi Hobby</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <section id="presentacion" class="seccion">
+            <h2>Presentación Personal</h2>
+            <p>Hola, soy Aarón Chicaiza y tengo 22 años.</p>
+            <p>Actualmente estudio Ingeniería en Sistemas en la Universidad Técnica de Cotopaxi.</p>
+            <p>Mi comida favorita son las hamburguesas y mi color favorito es el azul.</p>
+            <img src="img.png" alt="Imagen de Aarón" class="img-fluid rounded-circle">
+        </section>
+
+        <section id="hobby" class="seccion" style="display: none;">
+            <h2>Mi Hobby</h2>
+            <p>Uno de mis hobbies favoritos es ir al gimnasio. Mi ejercicio favorito es el bench press porque me ayuda a trabajar varios grupos musculares y me hace sentir más fuerte.</p>
+            <p>El gym es parte esencial de mi rutina diaria y contribuye a mi bienestar.</p>
+            <button id="botonCambiar" class="btn btn-primary mt-3" onclick="cambiarContenido()">Cambiar Contenido</button>
+        </section>
+
+        <div class="row">
+            <div class="col-md-4" id="color1">
+                <p>Div de prueba 1</p>
+            </div>
+            <div class="col-md-4" id="color2">
+                <p>Div de prueba 2</p>
+            </div>
+        </div>
+        <button class="btn btn-success" onclick="cambiarColor('color1', 'green')">Cambiar Color 1</button>
+        <button class="btn btn-danger" onclick="cambiarColor('color2', 'red')">Cambiar Color 2</button>
+
+        <section id="contacto" class="seccion" style="display: none;">
+            <h2>Contacto</h2>
+            <p>Si quieres saber más sobre mí, puedes escribirme a mi correo o visitar mi Facebook: <strong>chicaizaaaron@gmail.com</strong>.</p>
+            <button class="btn btn-primary" onclick="window.open('https://www.facebook.com/isaac.chicaisa.1', '_blank')">Ir a mi Facebook</button>
+        </section>
+
+        <section class="my-5 text-center">
+            <button id="botonAceptar" class="btn btn-success" onclick="showMessage()">Aceptar</button>
+        </section>
+    </main>
+
+    <footer class="bg-light text-center py-3">
+        <p>© 2024 Aarón Chicaiza. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function mostrarSeccion(seccionId) {
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(seccion => {
+                seccion.style.display = seccion.id === seccionId ? 'block' : 'none';
+            });
+        }
+
+        function showMessage() {
+            alert('Has presionado el botón Aceptar');
+        }
+
+        function cambiarContenido() {
+            const hobbySection = document.getElementById('hobby');
+            const newContent = `
+                <h2>Contenido Actualizado</h2>
+                <p>Este es el nuevo contenido generado dinámicamente al presionar el botón "Cambiar Contenido".</p>
+                <button id="botonCambiar" class="btn btn-primary mt-3" onclick="cambiarContenido()">Cambiar Contenido</button>
+            `;
+            hobbySection.innerHTML = newContent;
+        }
+
+        function cambiarColor(divId, color) {
+            const divs = ['color1', 'color2'];
+            divs.forEach(id => {
+                document.getElementById(id).style.backgroundColor = id === divId ? color : '';
+            });
+        }
+    </script>
+</body>
+
+</html>
