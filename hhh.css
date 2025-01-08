@@ -1,0 +1,81 @@
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Color de fondo: muy claro */
+    color: #333; /* Color del texto: gris oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+.header {
+    background-color: steelblue; /* Cambiar a cualquier color: azure, coral, lavender, etc. */
+    color: white; /* Color del texto: blanco */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las secciones del contenido principal */
+.main-content {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px; /* Ajuste de ancho máximo para acomodar tres imágenes en línea */
+    background-color: white; /* Color de fondo: blanco */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilos para las filas de imágenes */
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilos para cada columna de imágenes */
+.image-column {
+    flex: 1;
+    margin: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: darkslateblue; /* Cambiar a cualquier color: navy, teal, maroon, etc. */
+    color: white; /* Color del texto: blanco */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección de botones */
+.button-section {
+    margin-top: 20px;
+}
+
+.button-section button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333; /* Color de fondo: gris oscuro */
+    color: white; /* Color del texto: blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-section button:hover {
+    background-color: #555; /* Color de fondo al pasar el cursor: gris medio */
+}

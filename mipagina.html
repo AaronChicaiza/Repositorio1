@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietas para Ganar Músculo y Perder Grasa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e9f7e9;
+        }
+        .hero {
+            background-color: #d4edda;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .section-title {
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+            color: #155724;
+        }
+        .nav-link.active {
+            background-color: #28a745;
+            color: white !important;
+        }
+        .seccion {
+            display: none;
+        }
+        .seccion-activa {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dietas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="mostrarSeccion('muscle')">Ganar Músculo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="mostrarSeccion('fatloss')">Perder Grasa</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Tips para Ganar Músculo y Perder Grasa</h1>
+            <p>Descubre los mejores consejos y planes alimenticios para tus objetivos.</p>
+        </div>
+    </header>
+
+    <section id="muscle" class="seccion seccion-activa py-5">
+        <div class="container">
+            <h2 class="section-title">Para Ganar Músculo</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Alimentos Clave</h3>
+                    <ul>
+                        <li>Pechuga de pollo y pavo.</li>
+                        <li>Pescados como salmón y atún.</li>
+                        <li>Arroz integral, quinoa y batata.</li>
+                        <li>Frutas como plátanos y manzanas.</li>
+                    </ul>
+                    <h4>Superávit Calórico</h4>
+                    <video controls width="100%">
+                        <source src="videoplayback (2).mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
+                <div class="col-md-6">
+                    <h3>Consejo</h3>
+                    <p>Consume un excedente calórico moderado y prioriza las proteínas.</p>
+                    <img src="prote.jpg" class="img-fluid mt-3" width="50%">
+                    <h4>¿Cómo ganar músculo?</h4>
+                    <audio controls>
+                        <source src="5 trucos que aumentaron mi masa muscular  Etapa de volumen.mp3" type="audio/mpeg">
+                        Tu navegador no soporta audios HTML5.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Perder Grasa -->
+    <section id="fatloss" class="seccion py-5">
+        <div class="container">
+            <h2 class="section-title">Para Perder Grasa</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Alimentos Clave</h3>
+                    <ul>
+                        <li>Verduras de hojas verdes.</li>
+                        <li>Proteínas magras como pollo y tofu.</li>
+                        <li>Grasas saludables como aguacate y nueces.</li>
+                        <li>Avena y arroz integral.</li>
+                    </ul>
+                    <h4>Déficit Calórico</h4>
+                    <video controls width="100%">
+                        <source src="Cómo hacer un DÉFICIT CALÓRICO para perder grasa ¡BIEN HECHO!.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
+                <div class="col-md-6">
+                    <h3>Consejo</h3>
+                    <p>Reduce el consumo de carbohidratos simples y mantén un déficit calórico.</p>
+                    <img src="grasjpg.jpg" class="img-fluid mt-3" width="50%">
+                    <h4>¿Cómo perder grasa?</h4>
+                    <audio controls>
+                        <source src="LO ÚNICO QUE NECESITAS HACER PARA BAJAR DE PESO  DÉFICIT CALÓRICO.mp3" type="audio/mpeg">
+                        Tu navegador no soporta audios HTML5.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-3 bg-light">
+        <p>&copy; 2025 Dietas Saludables. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para cambiar de secciones -->
+    <script>
+        function mostrarSeccion(seccionId) {
+            var secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(function(seccion) {
+                seccion.classList.remove('seccion-activa');
+            });
+            var seccionActiva = document.getElementById(seccionId);
+            seccionActiva.classList.add('seccion-activa');
+        }
+    </script>
+</body>
+</html>
